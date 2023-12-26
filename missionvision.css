@@ -1,0 +1,63 @@
+.missionvision__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* For two items, creates two columns */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 40vh; /* Take up full viewport height or adjust as needed */
+    gap: 2rem; /* Adjust the gap between the boxes as needed */
+    padding: 0; /* Remove padding if any */
+    margin: 0 auto; /* Center the grid container itself if needed */
+}
+
+
+.missionvision__item{
+    background-color: var(--container-color);
+    padding :2rem;
+    border-radius: var(--radius);
+    position: relative;
+    transition: 0.5s var(--transition);
+    max-width: 900px; /* Set a max-width for the boxes if you need them to be a specific width */
+    margin: 0 auto; /* Center each grid item in its cell */
+    margin-bottom: 2rem;
+}
+
+.missionvision__item::before{
+    content: '';
+    position: absolute;
+    inset: 0.75rem;
+    border: 2px solid var(--first-color);
+    inset: 0.75rem;
+    border:  2px solid var(--first-color);
+    opacity: 0.2;
+    border-radius: inherit;
+}
+
+.missionvision__img{
+    width: 60px;
+    margin-bottom: 1.25rem;
+}
+  
+.missionvision__title{
+    font-size: var(--h3-font-size);
+    margin-bottom: 0.625rem;
+}
+
+.missionvision__shape{
+    position: absolute;
+    width: 120px;
+    right: 1.25rem;
+    top: 3rem;    
+    opacity: 0.2;
+    display: none;
+}
+  
+/*===============================
+  * Hover Effect 
+================================*/
+
+.missionvision__item:hover{
+    transform: translateY(-0.5rem);
+}
+
+
+

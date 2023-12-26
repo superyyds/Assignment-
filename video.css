@@ -1,0 +1,136 @@
+/* Background for the video section */
+.video {
+    background: url(../../assets/video.bg.jpg) center/cover fixed;
+    position: relative;
+    padding: 3rem 0; /* Adjust the padding as needed */
+    text-align: center; /* Center align content */
+}
+
+/* Background overlay */
+.video::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--hsla);
+    opacity: 0.1; /* Adjust the opacity to your preference (e.g., 0.5 for 50% opacity) */
+}
+
+/* Styles for section title and grid */
+.video .section__title,
+.video__grid {
+    position: relative;
+    z-index: 1;
+}
+
+/* Grid layout for video items */
+.video__grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Styles for individual video items */
+.video__item {
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--container-color);
+    padding: 1.25rem;
+    border-radius: var(--radius);
+    transition: 0.5s var(--transition);
+}
+
+/* Styles for the video item image wrapper */
+.video__img-wrapper {
+    border: 2px dashed var(--first-color);
+    padding: 3px;
+    width: 80px;
+    height: 80px;
+}
+
+/* Rounded borders for video item image */
+.video__img-wrapper,
+.video__img {
+    border-radius: 50%;
+}
+
+/* Styles for video item data (title and price) */
+.video__data {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 0.75rem;
+}
+
+/* Styles for video item title */
+.video__title,
+.video__price {
+    color: var(--first-color);
+}
+
+/* Styles for video item title */
+.video__title {
+    font-size: var(--large-font-size);
+    margin-bottom: 0.25rem;
+}
+
+/* Styles for video item price */
+.video__price {
+    border-left: 2px dashed var(--first-color);
+    padding-left: 1.5rem;
+    font-size: var(--larger-font-size);
+    font-weight: var(--weight-600);
+}
+
+/* Hover effect for video items */
+.video__item:hover {
+    transform: translateY(-0.5rem);
+}
+
+/* Style the video subtitle */
+.video__subtitle {
+    font-size: 2.56rem; /* Adjust the font size as needed */
+    color: #f0f0f0; /* Text color for the subtitle */
+}
+
+/* Style the video player */
+.video__player {
+    width: 80%; /* Adjust the width as needed */
+    max-width: 800px; /* Set a maximum width to prevent the video from becoming too wide */
+    margin: 2rem auto; /* Adjust the margin as needed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a shadow to the video player */
+}
+
+/* Style the video description */
+.video__description {
+    font-size: 1rem; /* Adjust the font size as needed */
+    color: #777; /* Text color for the description */
+    margin: 1rem 0; /* Adjust the margin as needed */
+}
+
+/* Style the video controls */
+video {
+    width: 100%; /* Set video width to 100% */
+    max-width: 100%; /* Set maximum video width to 100% */
+    height: auto; /* Maintain the aspect ratio */
+    border: 1px solid #ccc; /* Add a border around the video */
+    background-color: #000; /* Background color for the video player */
+}
+
+/* Customize the appearance of video controls (for webkit browsers) */
+video::-webkit-media-controls {
+    background-color: rgba(0, 0, 0, 0.7); /* Background color for controls */
+    color: #fff; /* Text color for controls */
+}
+
+video::-webkit-media-controls-play-button,
+video::-webkit-media-controls-volume-slider {
+    background-color: #000; /* Play button and volume slider color */
+}
+
+/* Customize the appearance of video controls (for non-webkit browsers) */
+video::media-controls-play-button,
+video::media-controls-volume-slider {
+    background-color: #000; /* Play button and volume slider color */
+}
